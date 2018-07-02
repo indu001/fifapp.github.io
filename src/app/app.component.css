@@ -1,4 +1,6 @@
-
+main {
+    margin: 0 15px;
+}
 
 header{
   height:80px;
@@ -18,11 +20,11 @@ header .fifa-title {
 }
 
 .fifa-img{
-    height: 62px;
-    width: 62px;
+    height: 75px;
+    width: 66px;
     position: absolute;
     left: 5px;
-    top : 10px;
+    top : 3px;
     background-image: url('../assets/images/cup.png');
     background-size: 100% 100%;
     margin-right: 10px;
@@ -36,7 +38,6 @@ header .fifa-title {
     text-transform: uppercase;
     color:#164178;
     font-weight: 600;
-    /* background: #eee; */
     box-sizing: border-box;
     padding: 0;
 }
@@ -51,6 +52,24 @@ header .fifa-title {
 }
 
 .nav-links li div {
-    border: solid 1px #fff;
+    border: solid 1px #ddd;
     border-radius:5px;
+    box-sizing: border-box;
+    padding: 3px;
+    position: relative;
+}
+
+.nav-links li div.active::after {
+    content:'';
+    display: block;
+    border: solid 1px #164178;
+    border-radius:5px;
+    position: absolute;
+    bottom:-2px;
+    width:98% ;
+}
+
+.nav-links li div:hover {
+    background-color: #eee;
+    font-size:1.1em;
 }

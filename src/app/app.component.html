@@ -5,9 +5,16 @@
   </header>
   <nav>
       <ul class='nav-links clearfix'>
-        <li><div>Groups</div></li>
-        <li><div>Match Schedules</div></li>
+        <li (click)='onSelect("groups")'><div>Groups</div></li>
+        <li (click)='onSelect("matches")'><div>Match Schedules</div></li>
       </ul>
+      <div *ngIf='activeTab === "groups"; else content2'>
+        <app-groups></app-groups>
+      </div>
+      <ng-template #content2>
+        <app-matches></app-matches>
+      </ng-template>
+
   </nav>
   <section>
   </section>
