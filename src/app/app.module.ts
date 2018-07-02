@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { GroupsComponent } from './components/groups/groups.component';
 import { MatchesComponent } from './components/matches/matches.component';
 import { GroupComponent } from './components/group/group.component';
+import { MatchComponent } from './components/match/match.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { GroupComponent } from './components/group/group.component';
     AppComponent,
     GroupsComponent,
     MatchesComponent,
-    GroupComponent
+    GroupComponent,
+    MatchComponent
   ],
   imports: [
     BrowserModule

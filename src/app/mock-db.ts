@@ -33,4 +33,7 @@ export const GROUPS  = [
     }
 
 ];
-    
+
+export const START_DT = '15-06-2018';
+export const MAX = 3;
+export const SLOTS = ['5:30','8:30', '11:30'];   
