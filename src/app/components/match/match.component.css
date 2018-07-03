@@ -1,0 +1,56 @@
+.match-wrapper{
+    width:50%;
+    float: left;
+}
+.match {
+    border:solid 1px #eee;
+    margin:0 10px 10px 10px;
+    border-radius:5px;
+    min-height:120px;
+}
+.title {
+    height:25px;
+    color:#fff;
+    background-color: #164178;
+    padding: 3px 5px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+
+.flag{
+    width: 50px;
+    height: 100%;
+    margin-bottom:10px;
+}
+.flag img{
+    width: 100%;
+    height:auto;
+}
+.teams{
+    list-style: none;
+    padding:0 10px;
+}
+.teams-wrp {
+    padding: 2px 10px;
+    position: relative;
+}
+.team {
+    display: block;
+}
+.tname{
+    font-size:1.1em;
+    text-align:center;
+}
+.timeslot {
+    padding: 3px 10px;
+    border-bottom:solid 1px #eee;
+}
+.team-inner{
+    position: absolute;
+    left: 30%;
+    top: 10px;
+    margin-left: -10px;
+}
+.vstxt{
+    margin: 5px 5px 0 5px;
+}

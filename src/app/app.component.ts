@@ -10,8 +10,6 @@ export class AppComponent {
   activeTab = 'groups';
   
   onSelect(selected:string):void {
-    console.log(selected);
     this.activeTab = selected;
-    console.log(this.activeTab);
   }
 }

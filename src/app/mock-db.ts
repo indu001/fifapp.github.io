@@ -34,6 +34,9 @@ export const GROUPS  = [
 
 ];
 
-export const START_DT = '15-06-2018';
-export const MAX = 3;
-export const SLOTS = ['5:30','8:30', '11:30'];   
+export  const INFO = {
+    start_dt : '2018-06-15',
+    daily_count:3,
+    grp_size:4,
+    slots:['5:30PM','8:30PM', '11:30PM']
+}; 
