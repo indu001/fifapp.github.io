@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MatchService} from '../../match.service';
-import {Match} from '../../match';
+import {MatchService} from '../../services/match.service';
+import {Match} from '../../models/match';
 
 @Component({
   selector: 'app-matches',
@@ -8,15 +8,13 @@ import {Match} from '../../match';
   styleUrls: ['./matches.component.css']
 })
 export class MatchesComponent implements OnInit {
-  
-  matches:Match[]
-  constructor(private matchService:MatchService) { }
+  matches: Match [ ];
+  constructor(private matchService: MatchService) { }
 
   ngOnInit() {
     this.getMatches();
   }
-  getMatches():void {
+  getMatches(): void {
     this.matches = this.matchService.getMatches();
   }
-  
 }

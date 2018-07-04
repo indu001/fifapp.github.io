@@ -9,7 +9,6 @@ import {GROUPS} from '../../mock-db';
 export class GroupsComponent implements OnInit {
 
   groups = GROUPS;
-   
   ngOnInit() {
   }
 
