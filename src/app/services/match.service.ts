@@ -24,7 +24,10 @@ export class MatchService {
         return item;
     });
     const grand_total = groups.reduce((tot, grp) => {
-      const n = grp.teams.length;
+      let n = grp.teams.length;
+      if (n % 2 !== 0) {
+         n += 1;
+      }
       tot += (n * (n - 1 ) / 2);
       return tot ;
     }, 0);
@@ -36,13 +39,13 @@ export class MatchService {
 
       for ( let idx = 0 ; idx < (len / 2); idx++) {
         /* if opponent is dummy , ignore pair */
-        if (teams[t1] !== null && teams[t2] !== null) {
+        // if (teams[t1] !== null && teams[t2] !== null) {
           const obj = {
             pair: [ teams[t1], teams[t2]],
             id: id
           };
             pairs.push(obj);
-        }
+        // }
         t1++;
         t2--;
       }
@@ -67,12 +70,12 @@ export class MatchService {
     /*Compute team pairings for all groups */
     while ( pairs.length < grand_total) {
       /* Add dummy team if number of teams is odd */
+    if (curgrp.teams.length % 2 !== 0) {
+      curgrp.teams.push(null);
+    }
     const len = curgrp.teams.length;
     const total = len * (len - 1) / 2;
     const paircount = Math.floor(len / 2);
-    if (len % 2 !== 0) {
-      curgrp.teams.push(null);
-    }
     if (!curgrp.done) {
       const teams = curgrp.teams;
       pairTeams(teams, curgrp.id);
@@ -91,10 +94,14 @@ export class MatchService {
        const {pair, id} = pairs[0];
        pairs.splice(0, 1);
        const timeslot = schedule.nextSchedule();
+       if ( pair[0] !== null && pair[1] !== null) {
+
        const match = new Match();
        [match.slot, match.day, match.teams] = [timeslot.slot, timeslot.day, pair];
         match.grp = id;
         matches.push(match);
+
+       }
 
     }
 

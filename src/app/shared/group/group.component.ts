@@ -10,9 +10,10 @@ export class GroupComponent implements OnInit {
   constructor() { }
   teamName(name: string): string {
     /* Remove spaces and convert to lower case*/
-
-    const nam = name.replace(/\s/g, '').toLowerCase();
-    return nam;
+    if (name !== null) {
+      const nam = name.replace(/\s/g, '').toLowerCase();
+      return nam;
+    }
   }
   ngOnInit() {
   }
