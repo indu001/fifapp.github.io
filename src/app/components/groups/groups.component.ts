@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {GROUPS} from '../../mock-db';
+import data from '../../db';
 
 @Component({
   selector: 'app-groups',
@@ -8,7 +8,7 @@ import {GROUPS} from '../../mock-db';
 })
 export class GroupsComponent implements OnInit {
 
-  groups = GROUPS;
+  groups = data.Groups;
   ngOnInit() {
   }
 

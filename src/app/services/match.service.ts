@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Group} from '../models/group';
 import {Match} from '../models/match';
 import {Schedule} from '../models/schedule';
-import {GROUPS, INFO} from '../mock-db';
+import data from '../db';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +10,8 @@ import {GROUPS, INFO} from '../mock-db';
 export class MatchService {
   getMatches(): Match[] {
     const matches = [];
-    const groups = GROUPS;
-    const info = INFO;
+    const groups = data.Groups;
+    const info = data.Info;
     const pairs = [];
     const grps = groups.map((elem, i , a) => {
         const item = new Group();
