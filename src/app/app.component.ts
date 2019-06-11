@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  activeTab = 'groups';
+  onSelect(selected: string): void {
+    this.activeTab = selected;
+  }
 }

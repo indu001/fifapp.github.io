@@ -1,14 +1,24 @@
 <main>
   <header>
     <div class='fifa-img'></div>
-    <div class='fifa-title'>2018 FIFA WORLD CUP  RUSSIA</div>
+    <div class='fifa-title'>2018 FIFA WORLD CUP RUSSIA</div>
   </header>
   <nav>
-      <ul class='nav-links clearfix'>
-        <li><div>Groups</div></li>
-        <li><div>Match Schedules</div></li>
-      </ul>
+    <ul class='nav-links clearfix'>
+      <li (click)='onSelect("groups")'>
+        <div>Groups</div>
+      </li>
+      <li (click)='onSelect("matches")'>
+        <div>Match Schedules</div>
+      </li>
+    </ul>
   </nav>
   <section>
+    <div *ngIf='activeTab === "groups"; else content2'>
+      <app-groups></app-groups>
+    </div>
+    <ng-template #content2>
+      <app-matches></app-matches>
+    </ng-template>
   </section>
 </main>

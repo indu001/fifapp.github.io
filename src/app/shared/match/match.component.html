@@ -1,0 +1,26 @@
+<div class='match-wrapper'>
+  <div class='match'>
+    <div class='title'>Match {{index+1}}</div>
+    <div class='timeslot clearfix'>
+      <div class='fl'>{{match.day | date:fullDate}}</div>
+      <div class='fr'> Time: {{match.slot}}</div>
+    </div>
+    <div class='teams-wrp'>
+      <div class='team-inner clearfix'>
+        <div class='team fl'>
+          <div class='flag'>
+            <img src='../../../assets/images/teams/{{teamName(match.teams[0])}}.png' />
+          </div>
+          <div class='tname'>{{match.teams[0]}}</div>
+        </div>
+        <div class='fl vstxt'> VS</div>
+        <div class='team fl'>
+          <div class='flag'>
+            <img src='../../../assets/images/teams/{{teamName(match.teams[1])}}.png' />
+          </div>
+          <div class='tname'>{{match.teams[1]}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

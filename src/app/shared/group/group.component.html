@@ -1,0 +1,15 @@
+<div class='grp-wrapper'>
+  <div class='group'>
+    <div class='title'> GROUP {{group.id}}</div>
+    <div class='teams-wrp'>
+      <ul class='teams'>
+        <li *ngFor='let team of group.teams' class='team clearfix'>
+          <div class='fl tname'>{{team}}</div>
+          <div class='flag fr'>
+            <img src='../../../assets/images/teams/{{teamName(team)}}.png' />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
